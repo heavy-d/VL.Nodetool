@@ -64,14 +64,15 @@
             </p:NodeReference>
             <Pin Id="VrYVgyFMgrsOSJcpCXzMz1" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="OIBOXhjzvV6PuSrE3IaAeC" Name="Has Changed" Kind="OutputPin" IsHidden="true" />
-            <Pin Id="Aemm4H53MEnM38IOpjfwhW" Name="URL" Kind="OutputPin" />
             <Pin Id="PYV8Kp6bK91OGv8ZreNJcO" Name="Status" Kind="OutputPin" />
-            <Pin Id="RTlCiYfAVrTM5BYIs8RwWN" Name="In Progress" Kind="OutputPin" />
+            <Pin Id="Aemm4H53MEnM38IOpjfwhW" Name="URL" Kind="OutputPin" />
+            <Pin Id="AvzGABQ34qTLReYPCTZ6s1" Name="Headers" Kind="OutputPin" />
             <Pin Id="KZYma2VJxTpMg3fusw4MNe" Name="Workflows" Kind="OutputPin" />
             <Pin Id="RYg44PM7CRdNjcSlXsKEwS" Name="Examples" Kind="InputPin" />
             <Pin Id="O4SPHjQBQI7NMCYXzNXBn0" Name="Index" Kind="InputPin" />
             <Pin Id="Rya0h1OsFMuMy1cznjkkEW" Name="Limit" Kind="InputPin" />
             <Pin Id="OYFWbzEwhjrPOzAO6rWGei" Name="Refresh" Kind="InputPin" />
+            <Pin Id="RTlCiYfAVrTM5BYIs8RwWN" Name="In Progress" Kind="OutputPin" />
             <Pin Id="QQrDUQ8CaXeL7YXrZVddPP" Name="Count" Kind="OutputPin" />
           </Node>
           <Node Bounds="1248,720,96,19" Id="VdwpHxZimZIMiYpoFZWu62">
@@ -93,7 +94,7 @@
               <p:fontsize p:Type="Int32">14</p:fontsize>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="FtddygiC0BxLJdLCXLL0rX" Comment="Refresh" Bounds="1625,376,35,35" ShowValueBox="true" isIOBox="true">
+          <Pad Id="FtddygiC0BxLJdLCXLL0rX" Comment="Refresh" Bounds="1625,376,35,35" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
@@ -101,15 +102,6 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Node Bounds="1623,290,54,19" Id="GwoD6kqC9eBMpkYn5hf6nj">
-            <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="OnOpen" />
-            </p:NodeReference>
-            <Pin Id="Ju3xv19cqQwPUbC048OK5p" Name="Node Context" Kind="InputPin" IsHidden="true" />
-            <Pin Id="SWbobHeP6MsNuLZJxFOnNk" Name="Simulate" Kind="InputPin" />
-            <Pin Id="MPme3q0Ug8jPOeanyhxEiZ" Name="Output" Kind="OutputPin" />
-          </Node>
           <Overlay Id="UnlyUS86Qy4Nb6zItZRaUm" Name="GetWorkflows" Bounds="1223,247,511,256" />
           <Pad Id="JPMYOdJu9V4O9IaEPSQRuK" Comment="Count" Bounds="1625,461,35,15" ShowValueBox="true" isIOBox="true" />
           <Node Bounds="1248,782,412,26" Id="CG27BqZ7WC2L6XBFnr6rmi">
@@ -258,23 +250,6 @@
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Node Bounds="1623,317,85,19" Id="RrEVOkCjop5MTljJMcpyrb">
-            <p:NodeReference LastCategoryFullName="Animation" LastDependency="VL.CoreLib.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <FullNameCategoryReference ID="Animation" />
-              <Choice Kind="ProcessAppFlag" Name="Delay" />
-            </p:NodeReference>
-            <Pin Id="N4aYHvma4ECLiAwyLBMVYg" Name="Node Context" Kind="InputPin" IsHidden="true" />
-            <Pin Id="T1SLb97vEeXOkPWLneGdX9" Name="Clock" Kind="InputPin" IsHidden="true" />
-            <Pin Id="Bh8mupnkPBaO6SMpWQgYXh" Name="New Clock" Kind="InputPin" IsHidden="true" />
-            <Pin Id="RcyEaIaEjoQNc4j1wl1fq3" Name="Value" Kind="InputPin" />
-            <Pin Id="KZYXtopmc8wPKYrJwF1nUD" Name="Insert" Kind="InputPin" DefaultValue="True" />
-            <Pin Id="Ei1vCqnoqXkLUFzv07cjXb" Name="Duration" Kind="InputPin" DefaultValue="0.1" />
-            <Pin Id="BHoaE4Vx0CyP9w5YLrFQVD" Name="Reset Value" Kind="InputPin" />
-            <Pin Id="F3ZGbFl97HoNDyiPHaHgY4" Name="Reset" Kind="InputPin" />
-            <Pin Id="MvS1XnWQDhEL1Rb2Uq6qWG" Name="Output" Kind="OutputPin" />
-            <Pin Id="AHigVDunMbILtF4n64D87T" Name="Count" Kind="OutputPin" />
-          </Node>
           <Overlay Id="NIG0OOpSEWrO08wPtxL5cU" Name="Select Workflow" Bounds="1227,620,695,500" />
         </Canvas>
         <Patch Id="NMh2kTPGomXPv3G5IuPm6J" Name="Create" />
@@ -286,7 +261,6 @@
         <Link Id="AJ0HuD8xxTLMMvE5E5S6ze" Ids="ITWGtydtUvvLg9AHfIQO2U,RflpFzPF5qMLlDWYP26eni" />
         <Link Id="RZcQDhWnb15ObnZe6af7H9" Ids="ITWGtydtUvvLg9AHfIQO2U,ThpQxutzAKpM89XdY84BJV" />
         <Link Id="GI8VKVHI6ocLvjym0TZb1P" Ids="FtddygiC0BxLJdLCXLL0rX,OYFWbzEwhjrPOzAO6rWGei" />
-        <Link Id="QE2CFFk7A6tOYCHy50HfIB" Ids="MPme3q0Ug8jPOeanyhxEiZ,RcyEaIaEjoQNc4j1wl1fq3" />
         <Link Id="AgbentTC0ZoPmwuvmcizd9" Ids="QQrDUQ8CaXeL7YXrZVddPP,JPMYOdJu9V4O9IaEPSQRuK" />
         <Link Id="J0vsP3xhm86N7171ZDZXk2" Ids="KUH3iDeYPBGMSulPxcu0Q8,LSsl9XezrBvM00XchkgSiU" />
         <Link Id="JQ6IZrGX4LzLDDRXce7nUd" Ids="Czpk0Ykt9KQMcNWvP9E4As,QqMseaQ7X8CP3DOHqqldzx" />
@@ -307,7 +281,6 @@
         <Link Id="B8ZdqlGgx40LP4X0zZCGCZ" Ids="DRLqGGC69iPM07xcROv1Ui,Rya0h1OsFMuMy1cznjkkEW" />
         <Link Id="TXWRYw6EGJCMFkfxbxH6r5" Ids="M8oVoC149OdOezusVNgfZ6,RYg44PM7CRdNjcSlXsKEwS" />
         <Link Id="P08qig5I5W8MtLwarXV9Rd" Ids="D31L7aSsDOQOWoC2Q3Cy4v,O4SPHjQBQI7NMCYXzNXBn0" />
-        <Link Id="PrE9PLsb9jTNK47XeVRPSI" Ids="MvS1XnWQDhEL1Rb2Uq6qWG,FtddygiC0BxLJdLCXLL0rX" />
       </Patch>
     </Node>
   </Patch>
